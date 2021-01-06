@@ -1,0 +1,26 @@
+include: package:pedantic/analysis_options.yaml
+
+linter:
+  rules:
+    - parameter_assignments
+    - camel_case_types
+    - constant_identifier_names
+    - non_constant_identifier_names
+    - null_closures
+    - close_sinks
+
+analyzer:
+  errors:
+    missing_required_param: error
+    parameter_assignments: error
+    missing_return: error
+    prefer_asserts_in_initializer_lists: warning
+    close_sinks: error
+    constant_identifier_names: warning
+    non_constant_identifier_names: warning
+    null_closures: error
+  exclude: [build/**]
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+    
